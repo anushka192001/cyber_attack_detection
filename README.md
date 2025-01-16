@@ -32,6 +32,6 @@ The pipeline consists of the following stages:
 To set up the project on your local machine, clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/your-username/url-malicious-classification.git
+git clone https://github.com/anushka192001/cyber_attack_detection.git
 cd url-malicious-classification
 pip install -r requirements.txt
