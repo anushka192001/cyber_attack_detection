@@ -33,5 +33,4 @@ To set up the project on your local machine, clone this repository and install t
 
 ```bash
 git clone https://github.com/anushka192001/cyber_attack_detection.git
-cd url-malicious-classification
 pip install -r requirements.txt
