@@ -1,0 +1,33 @@
+MODEL_CLASSES_AND_PARAMETERS = {
+    # https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+    "NAIVE_BAYES": (GaussianNB,
+            {"priors": None, "var_smoothing": 1e-09}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+    "KNN": (KNeighborsClassifier,
+        {"n_neighbors": 5, "weights": "uniform", "algorithm": "auto", "leaf_size": 30, "p": 2, "metric": "minkowski", "metric_params": None, "n_jobs": None}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+    "DECISION_TREE": (DecisionTreeClassifier,
+                      {"random_state": random_state, "criterion": "gini", "splitter": "best", "max_depth": None, "min_samples_split": 2, "min_samples_leaf": 1, "max_features": None, "max_leaf_nodes": None, "class_weight": None}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+    "LOGISTIC_REGRESSION": (LogisticRegression,
+                       {"random_state": random_state, "class_weight": None, "solver": "lbfgs", "max_iter": 100}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+    "SVC": (SVC,
+            {"kernel": "rbf", "gamma": "scale", "class_weight": None, "random_state": random_state}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+    "RANDOM_FOREST": (RandomForestClassifier,
+                      {"n_estimators": 100, "random_state": random_state, "criterion": "gini", "max_depth": None, "class_weight": None}),
+
+    # https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMClassifier.html
+    "LIGHTGBM": (LGBMClassifier,
+            {"boosting_type": "gbdt", "num_leaves": 31, "learning_rate": 0.1, "n_estimators": 100, "random_state": random_state}),
+
+    # https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+    "NN": (MLPClassifier,
+            {"hidden_layer_sizes": (100,), "activation": "relu", "learning_rate": "constant", "learning_rate_init": 0.001, "max_iter": 200, "random_state": random_state}),
+}

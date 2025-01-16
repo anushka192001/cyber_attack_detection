@@ -1,0 +1,2 @@
+def charset_cleaner(charset):
+    return "other" if charset not in ['UTF-8','ISO-8859-1','utf-8','us-ascii','iso-8859-1'] else charset.lower()
